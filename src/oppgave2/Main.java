@@ -1,5 +1,7 @@
 package oppgave2;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         final String[] kokker = {"Anne", "Erik", "Knut"};
@@ -19,6 +21,10 @@ public class Main {
     }
 
     public static void skrivUtHeader(String[] kokker, String[] servitorer, int KAPASITET) {
-        // Logikk her
+        System.out.println("I denne simuleringen har vi");
+        System.out.println("    " + kokker.length + " Kokker: " + Arrays.toString(kokker));
+        System.out.println("    " + servitorer.length + " Servitorer: " + Arrays.toString(servitorer));
+        System.out.println("    Kapasiteten til brettet er " +  KAPASITET + " hamburgere.");
+        System.out.println("Vi starter");
     }
 }
