@@ -1,7 +1,9 @@
 package oppgave2;
 
+import java.util.Random;
+
 public class Servitor extends Thread {
-    // kanskje noe sånt
+    
     private HamburgerBrett brett;
     private String navn;
 
@@ -12,6 +14,20 @@ public class Servitor extends Thread {
 
     @Override
     public void run() {
-        // Logikk her
+
+        Random random = new Random();
+
+        while (true) {
+
+            try {
+
+                int ventetid = random.nextInt(5) + 2;
+                Thread.sleep(ventetid * 1000);
+
+                brett.taAv(navn);
+            } catch (InterruptedException e) {
+                return;
+            }
+        }
     }
 }
